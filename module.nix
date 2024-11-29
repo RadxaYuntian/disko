@@ -215,7 +215,7 @@ in
       {
         assertion = config.disko.imageBuilder.qemu != null -> diskoLib.vmToolsSupportsCustomQemu pkgs;
         message = ''
-          You have set config.disko.imageBuild.qemu, but vmTools in your nixpkgs version "${lib.version}"
+          You have set config.disko.imageBuild.qemu, but vmTools in your nixpkgs version "${pkgs.lib.version}"
           does not support overriding the qemu package with the customQemu option yet.
           Please upgrade nixpkgs so that `lib.version` is at least "24.11.20240709".
         '';
